@@ -1,0 +1,26 @@
+.principal{
+    margin-top: 6em;
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+}
+
+.contenedor{
+    margin-top: 40px;
+}
+
+@media(max-width: 768px){
+    .principal{
+        margin-top: 1em;
+    }
+}
+
+@media(min-width: 768px){
+    .principal{
+        margin-top: 6em;
+    }
+}
+
+.boton{
+    grid-column: 3/2;
+    grid-row: 1;
+}

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif !important;
+}
+
+ul li a, nav a{
+    cursor: pointer;
+    font-size: 1.2em !important;
+}
+
+.cabecera{
+    background-color: #343a40 !important;
+    
+}
+.cNav{
+    margin: 0 50px ;
+}
+
+@media(max-width:768px){
+    .cabecera{
+        position: relative;
+    }
+}

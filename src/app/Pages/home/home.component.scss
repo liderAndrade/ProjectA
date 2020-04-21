@@ -1,0 +1,15 @@
+.principal{
+    margin-top: 6em;
+}
+
+@media(max-width: 768px){
+    .principal{
+        margin-top: 0;
+    }
+}
+
+@media(min-width: 768px){
+    .principal{
+        margin-top: 6em;
+    }
+}

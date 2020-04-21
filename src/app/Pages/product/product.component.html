@@ -1,0 +1,30 @@
+<div class="principal"> 
+    <button type="button"  class="btn btn-success boton" (click)="presionado($event)">Presionar</button>
+</div>
+
+
+<div class="container contenedor">
+    <table class="table">
+        <thead>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of datos">
+                <td>{{item.Id}}</td>
+                <td>{{item.Nombre}}</td>
+                <td>{{item.Apellido}}</td>
+                <td>{{item.Estado}}</td>
+                <td>
+                    <button type="button" class="btn btn-primary">Activar</button>
+                    <button type="button" class="btn btn-success">Modificar</button>
+                    <button type="button" class="btn btn-danger">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

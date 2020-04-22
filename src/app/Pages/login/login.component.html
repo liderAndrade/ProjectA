@@ -5,8 +5,11 @@
         <div class="paddingBottom40 paddingTop17">
           <img class="logo img-responsive" src="../../../assets/logo.png" />
         </div>
-        <div class="bd-form-group" style="padding-bottom: 15px;">
-          <h1 class="font-align-size">
+        <div
+          class="bd-form-group"
+          style="padding-bottom: 15px; text-align: center;"
+        >
+          <h1 class="font-align-size" style="font-size: 2em !important;">
             Inicio de Sesión
           </h1>
         </div>
@@ -73,11 +76,11 @@
           </div>
         </div>
         <div class="bp-form-group margin-bottom-35">
-          <button *ngIf="!submitted" class="btn btn-block btn-lg btn-success">
+          <button *ngIf="!loadclick" class="btn btn-block btn-lg btn-success">
             Entrar
           </button>
           <button
-            *ngIf="submitted"
+            *ngIf="loadclick"
             class="btn btn-block btn-lg btn-success buttonload"
           >
             <i class="fa fa-circle-o-notch fa-spin"></i> Cargando

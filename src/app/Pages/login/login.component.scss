@@ -92,6 +92,12 @@
   height: auto;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins" sans-serif !important;
+}
+
 .container-fluid {
   padding-right: 15px;
   padding-left: 15px;

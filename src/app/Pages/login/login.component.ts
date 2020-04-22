@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { ApplicationProvider } from "../../Providers/Provider";
 import { ResponseLoggin } from "../../interfaces/ResponseLoggin";
+import { THIS_EXPR } from "@angular/compiler/src/output/output_ast";
 
 @Component({
   selector: "app-login",
@@ -13,6 +14,7 @@ export class LoginComponent implements OnInit {
   hide = true;
   sendForm: FormGroup;
   submitted = false;
+  loadclick = false;
 
   constructor(
     private fb: FormBuilder,
@@ -29,9 +31,10 @@ export class LoginComponent implements OnInit {
 
   Loggin(formValues) {
     this.submitted = true;
+    this.loadclick = true;
 
     if (this.sendForm.invalid) {
-      this.submitted = false;
+      this.loadclick = false;
       return;
     }
 
@@ -46,14 +49,17 @@ export class LoginComponent implements OnInit {
           localStorage.setItem("DATA_LOGGIN", JSON.stringify(resp));
           localStorage.setItem("is_loggin", "true");
           this.submitted = false;
+          this.loadclick = false;
           this.router.navigate(["/Home"]);
         } else {
+          this.loadclick = false;
           this.submitted = false;
         }
       },
       (error) => {
         console.log("error: ", error);
         this.submitted = false;
+        this.loadclick = false;
       }
     );
   }

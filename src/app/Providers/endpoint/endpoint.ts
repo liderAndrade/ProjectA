@@ -14,6 +14,7 @@ export class EndPointProvider {
 
   Loggin<T>(user: User): Observable<T> {
     const endpoint = this.host + "/api/Api";
+    console.log("endpoint: ", endpoint);
     return this.http.post<T>(endpoint, user);
   }
 

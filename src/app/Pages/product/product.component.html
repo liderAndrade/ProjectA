@@ -9,29 +9,29 @@
 </div>
 
 <div class="container contenedor">
-  <table class="table font-08-em">
+  <table class="table font-08-em table-bordered">
     <thead>
-      <th>Id</th>
-      <th>Nombre</th>
-      <th>Apellido</th>
-      <th>Estado</th>
-      <th>Acciones</th>
+      <th class="align-center-text">Id</th>
+      <th class="align-center-text">Nombre</th>
+      <th class="align-center-text">Apellido</th>
+      <th class="align-center-text">Estado</th>
+      <th class="align-center-text">Acciones</th>
     </thead>
     <tbody>
       <tr *ngFor="let item of datos">
-        <td>{{ item.Id }}</td>
-        <td>{{ item.Nombre }}</td>
-        <td>{{ item.Apellido }}</td>
-        <td>{{ item.Estado }}</td>
-        <td>
-          <button type="button" class="btn btn-primary font-08-em">
-            Activar
-          </button>
+        <td class="align-center-text">{{ item.Id }}</td>
+        <td class="align-center-text">{{ item.Nombre }}</td>
+        <td class="align-center-text">{{ item.Apellido }}</td>
+        <td class="align-center-text">{{ item.Estado }}</td>
+        <td class="td-buttons">
           <button type="button" class="btn btn-success font-08-em">
-            Modificar
+            <i class="fa fa-check" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-primary font-08-em">
+            <i class="fa fa-edit" aria-hidden="true"></i>
           </button>
           <button type="button" class="btn btn-danger font-08-em">
-            Eliminar
+            <i class="fa fa-trash" aria-hidden="true"></i>
           </button>
         </td>
       </tr>

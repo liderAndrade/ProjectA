@@ -11,6 +11,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
 import { ReactiveFormsModule } from "@angular/forms";
 import { AuthGuard } from "./shared/guard/auth.guard";
+import { NotyfModule } from "ng-notyf";
 import {
   EndPointProvider,
   ApplicationProvider,
@@ -27,6 +28,7 @@ import {
     MatInputModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NotyfModule,
   ],
   providers: [
     AuthGuard,

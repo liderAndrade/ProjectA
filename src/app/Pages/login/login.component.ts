@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { ApplicationProvider } from "../../Providers/Provider";
 import { ResponseLoggin } from "../../interfaces/ResponseLoggin";
-import { THIS_EXPR } from "@angular/compiler/src/output/output_ast";
+import { NotyfService } from "ng-notyf";
 
 @Component({
   selector: "app-login",
@@ -19,12 +19,16 @@ export class LoginComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private coreService: ApplicationProvider
+    private coreService: ApplicationProvider,
+    private notyfService: NotyfService
   ) {
     this.sendForm = this.fb.group({
       username: ["", Validators.required],
       password: ["", Validators.required],
     });
+
+    this.notyfService.toastContainerStyle = { top: "0" };
+    this.notyfService.toastDelay = 2000;
   }
 
   ngOnInit() {}
@@ -57,6 +61,7 @@ export class LoginComponent implements OnInit {
         }
       },
       (error) => {
+        this.notyfService.error("Ocurrió un error reintentelo");
         console.log("error: ", error);
         this.submitted = false;
         this.loadclick = false;

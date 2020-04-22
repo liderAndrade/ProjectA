@@ -1,0 +1,89 @@
+<div class="container container-fluid max-width-365">
+  <div class="panel panel-default bp-panel">
+    <form [formGroup]="sendForm" (ngSubmit)="Loggin(sendForm.value)">
+      <div class="bp-panel-body marginTop15px">
+        <div class="paddingBottom40 paddingTop17">
+          <img class="logo img-responsive" src="../../../assets/logo.png" />
+        </div>
+        <div class="bd-form-group" style="padding-bottom: 15px;">
+          <h1 class="font-align-size">
+            Inicio de Sesión
+          </h1>
+        </div>
+        <div class="bp-form-group padding-bottom">
+          <mat-form-field
+            appearance="outline"
+            style="width: 100%;"
+            class="mat-form"
+          >
+            <mat-label class="color-text">Usuario</mat-label>
+            <input
+              type="text"
+              matInput
+              formControlName="username"
+              [ngClass]="{
+                'is-invalid': submitted && sendForm.controls.username.errors
+              }"
+            />
+          </mat-form-field>
+          <div>
+            <div
+              *ngIf="submitted && sendForm.controls.username.errors"
+              class="feedback"
+            >
+              <div *ngIf="sendForm.controls.username.errors.required">
+                El campo usuario es requerido
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bp-form-group padding-bottom">
+          <div class="input-whith-icon">
+            <mat-form-field
+              appearance="outline"
+              style="width: 100%;"
+              class="mat-form"
+            >
+              <mat-label class="color-text">Contraseña</mat-label>
+              <input
+                [type]="hide ? 'password' : 'text'"
+                matInput
+                formControlName="password"
+                [ngClass]="{
+                  'is-invalid': submitted && sendForm.controls.password.errors
+                }"
+              />
+              <a class="show-password" matSuffix (click)="hide = !hide">
+                <mat-icon class="show-password" tyle="padding-top: 3px;">
+                  {{ hide ? "visibility_off" : "visibility" }}
+                </mat-icon>
+              </a>
+            </mat-form-field>
+          </div>
+          <div>
+            <div
+              *ngIf="submitted && sendForm.controls.password.errors"
+              class="feedback"
+            >
+              <div *ngIf="sendForm.controls.password.errors.required">
+                La contraseña es requerida
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bp-form-group margin-bottom-35">
+          <button *ngIf="!submitted" class="btn btn-block btn-lg btn-success">
+            Entrar
+          </button>
+          <button
+            *ngIf="submitted"
+            class="btn btn-block btn-lg btn-success buttonload"
+          >
+            <i class="fa fa-circle-o-notch fa-spin"></i> Cargando
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,130 @@
+.max-width-365 {
+  max-width: 365px;
+}
+
+.panel {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.bp-panel {
+  border-radius: 10px 10px 10px 10px;
+}
+
+.panel-default {
+  border-color: rgb(209, 206, 206);
+  //border-color: rgb(138, 135, 135);
+}
+
+.marginTop15 {
+  margin-top: 15px !important;
+}
+
+.bp-panel-body {
+  padding: 24px;
+}
+
+.paddingBottom40 {
+  margin-bottom: 40px !important;
+}
+.paddingTop17 {
+  padding-top: 17px !important;
+}
+
+.input-with-icon .form-control {
+  padding-right: 3.65rem;
+  box-sizing: border-box;
+}
+
+.bp-form-input {
+  color: #4a4a4a;
+  min-height: 40px;
+  height: 48px;
+  max-width: 317px;
+  width: 100%;
+  font-family: Prelo-Book;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 18px;
+}
+
+.bp-button-large {
+  background-color: #910711;
+  border: 0;
+  color: #ffff;
+  border-radius: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: Prelo-SemiBold;
+  font-size: 14px;
+  min-height: 40px;
+  min-width: 120px;
+  background-repeat: no-repeat;
+  height: 47px;
+  //margin-left: -6px;
+}
+
+//------------------------------------------------------------------
+.show-password:hover {
+  cursor: pointer !important;
+}
+
+//------------------------------------------------------------------------------------
+.color-botones {
+  background: linear-gradient(
+    #900710 0%,
+    #e6392a 100%,
+    #fc9970 100%
+  ) !important;
+}
+
+.logo {
+  //width: 152px;
+  float: none;
+  margin: 0 auto;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+}
+
+.feedback {
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color: #dc3545;
+}
+
+.padding-bottom {
+  padding-bottom: 1.34375em;
+}
+
+@media (max-width: 890px) {
+  .container-fluid {
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 920px) {
+  .container-fluid {
+    margin-top: 11px;
+  }
+}
+
+@media (max-width: 576px) {
+  .bp-panel {
+    width: 100%;
+  }
+}

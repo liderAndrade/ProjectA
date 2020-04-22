@@ -55,7 +55,7 @@
         <div>
           <li class="nav-item dropdown" style="list-style: none;">
             <a
-              class="nav-link dropdown-toggle"
+              class="nav-link dropdown-toggle link"
               href="#"
               id="navbarDropdown"
               role="button"
@@ -63,18 +63,19 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              <img src="../../../../assets/usuario.svg" />
+              <img src="../../../../assets/usuario.svg" style="height: 20px;" />
               <i class="arrow down"></i>
             </a>
             <div
-              class="dropdown-menu"
+              class="dropdown-menu clase"
               aria-labelledby="navbarDropdown"
               style="min-width: 0;"
             >
               <a
-                class="dropdown-item"
-                (click)="routerTo('Home')"
-                style="cursor: pointer;"
+                [routerLink]="['/login']"
+                class="dropdown-item clase"
+                (click)="routerTo('login')"
+                style="cursor: pointer; font-size: 0.7em !important;"
                 >Salir</a
               >
             </div>

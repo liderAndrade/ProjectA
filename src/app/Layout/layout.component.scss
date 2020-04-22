@@ -1,7 +1,24 @@
-
-.main-containerr{
+.main-containerr {
   width: 90%;
-  margin:auto;
-  
+  margin: auto;
+  height: 100vh;
+  display: block;
 }
 
+.foter {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(36, 33, 33);
+  color: white;
+
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 70px;
+}
+
+@media (max-width: 1000px) {
+  .foter {
+    position: relative;
+  }
+}

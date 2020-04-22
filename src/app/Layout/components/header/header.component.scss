@@ -1,24 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-*{
-    font-family: 'Poppins', sans-serif !important;
+* {
+  font-family: "Poppins", sans-serif !important;
 }
 
-ul li a, nav a{
-    cursor: pointer;
-    font-size: 1.2em !important;
+ul li a,
+nav a {
+  cursor: pointer;
+  font-size: 1em !important;
 }
 
-.cabecera{
-    background-color: #343a40 !important;
-    
+.cabecera {
+  background-color: #343a40 !important;
 }
-.cNav{
-    margin: 0 50px ;
+.cNav {
+  margin: 0 50px;
 }
 
-@media(max-width:768px){
-    .cabecera{
-        position: relative;
-    }
+@media (max-width: 768px) {
+  .cabecera {
+    position: relative;
+  }
+}
+
+.dropdown-toggle::after {
+  border-bottom-color: white;
+}
+
+.link {
+  color: white !important;
+}
+
+// .clase {
+//   transition: transform 0.2s;
+// }
+
+.clase:hover {
+  //   transform: scale(1.2);
+  background-color: rgb(179, 179, 179);
+  color: white;
 }

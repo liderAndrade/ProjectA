@@ -18,6 +18,11 @@ export class EndPointProvider {
     return this.http.post<T>(endpoint, user);
   }
 
+  getProducts<T>(): Observable<T> {
+    const endpoint = this.host + "/api/Api/getproducts";
+    return this.http.get<T>(endpoint);
+  }
+
   getRequestHeaders(
     access_token: any
   ): {

@@ -1,14 +1,14 @@
+import { NgModule } from "@angular/core";
 
-import { NgModule } from '@angular/core';
-
-import { LayoutRoutingModule } from './layout-routing.module';
-import { LayoutComponent } from './layout.component';
-import { HeaderComponent } from './components/header/header.component';
-import { HomeComponent } from '../Pages/home/home.component';
-import { ProductComponent } from '../Pages/product/product.component';
-import { AboutComponent } from '../Pages/about/about.component';
-import { InfomationComponent } from '../Pages/infomation/infomation.component';
-import { CommonModule } from '@angular/common';
+import { LayoutRoutingModule } from "./layout-routing.module";
+import { LayoutComponent } from "./layout.component";
+import { HeaderComponent } from "./components/header/header.component";
+import { HomeComponent } from "../Pages/home/home.component";
+import { ProductComponent } from "../Pages/product/product.component";
+import { AboutComponent } from "../Pages/about/about.component";
+import { InfomationComponent } from "../Pages/infomation/infomation.component";
+import { CommonModule } from "@angular/common";
+import { CardproductComponent } from "../components/cardproduct/cardproduct.component";
 
 @NgModule({
   declarations: [
@@ -17,12 +17,10 @@ import { CommonModule } from '@angular/common';
     HomeComponent,
     ProductComponent,
     AboutComponent,
-    InfomationComponent
+    InfomationComponent,
+    CardproductComponent,
   ],
-  imports: [
-    LayoutRoutingModule,
-    CommonModule
-  ],
-  providers: []
+  imports: [LayoutRoutingModule, CommonModule],
+  providers: [],
 })
-export class LayoutModule { }
+export class LayoutModule {}

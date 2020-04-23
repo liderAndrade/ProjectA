@@ -58,11 +58,11 @@ export class LoginComponent implements OnInit {
         } else {
           this.loadclick = false;
           this.submitted = false;
+          this.notyfService.error("No existe Usuario");
         }
       },
       (error) => {
         this.notyfService.error("Ocurrió un error reintentelo");
-        console.log("error: ", error);
         this.submitted = false;
         this.loadclick = false;
       }

@@ -19,21 +19,24 @@ const routes: Routes = [
       {
         path: "Home",
         component: HomeComponent,
+        canActivate: [AuthGuard],
       },
       {
         path: "Productos",
         component: ProductComponent,
+        canActivate: [AuthGuard],
       },
       {
         path: "Acercade",
         component: AboutComponent,
+        canActivate: [AuthGuard],
       },
       {
         path: "Info",
         component: InfomationComponent,
+        canActivate: [AuthGuard],
       },
     ],
-    canActivate: [AuthGuard],
   },
 ];
 

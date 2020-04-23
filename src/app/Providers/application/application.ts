@@ -8,4 +8,8 @@ export class ApplicationProvider {
   Loggin(user: User) {
     return this.coreEndPoint.Loggin(user);
   }
+
+  GetProducts() {
+    return this.coreEndPoint.getProducts();
+  }
 }

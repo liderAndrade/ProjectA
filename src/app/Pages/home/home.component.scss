@@ -1,15 +1,76 @@
-.principal{
-    margin-top: 6em;
+.principal {
+  margin-top: 4em;
+  background-color: #22303a;
 }
 
-@media(max-width: 768px){
-    .principal{
-        margin-top: 0;
-    }
+.layout {
+  height: 300px;
+  background-color: #22303a;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-@media(min-width: 768px){
-    .principal{
-        margin-top: 6em;
-    }
+.logo {
+  //width: 152px;
+  float: none;
+  margin: 0 auto;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.firstblock {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.secondblock {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.botonmostrar {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.botonmostrar:hover {
+  color: rgb(160, 152, 152);
+  border: 1px solid rgb(160, 152, 152);
+}
+
+.principal-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 200px;
+  justify-content: center;
+
+  margin-top: 50px !important;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .principal {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .principal {
+    margin-top: 4em;
+  }
+}
+
+@media (min-width: 1024) {
+  .principal-main {
+    grid-template-columns: repeat(4, calc((100% - var(2rem) * 3) / 4));
+  }
 }

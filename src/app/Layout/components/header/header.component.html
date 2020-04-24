@@ -18,7 +18,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li [ngClass]="{ active: home }">
+        <li [ngClass]="{ active: home, activehover: home, borderhover: !home }">
           <a
             class="nav-link clase"
             [routerLink]="['/Home']"
@@ -26,7 +26,14 @@
             >Home</a
           >
         </li>
-        <li [ngClass]="{ active: product }">
+        <li
+          class="borderhover"
+          [ngClass]="{
+            active: product,
+            activehover: product,
+            borderhover: !product
+          }"
+        >
           <a
             class="nav-link clase"
             [routerLink]="['/Productos']"
@@ -34,7 +41,10 @@
             >Productos</a
           >
         </li>
-        <li [ngClass]="{ active: about }">
+        <li
+          class="borderhover"
+          [ngClass]="{ active: about, activehover: about, borderhover: !about }"
+        >
           <a
             class="nav-link clase"
             [routerLink]="['/Acercade']"
@@ -42,7 +52,10 @@
             >Acerca De</a
           >
         </li>
-        <li [ngClass]="{ active: info }">
+        <li
+          class="borderhover"
+          [ngClass]="{ active: info, activehover: info, borderhover: !info }"
+        >
           <a
             class="nav-link clase"
             [routerLink]="['/Info']"

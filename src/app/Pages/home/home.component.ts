@@ -8,6 +8,7 @@ import { ApplicationProvider } from "src/app/Providers/Provider";
   styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent implements OnInit {
+  load: boolean = true;
   // valores: Product[] = [
   //   { title: "title 1", description: "description1" },
   //   { title: "title 2", description: "description2" },
@@ -30,9 +31,13 @@ export class HomeComponent implements OnInit {
     this.coreService.GetProducts().subscribe(
       (response: any) => {
         this.valores = response;
+        if (this.valores.length > 1) {
+          this.load = false;
+        }
       },
       (error) => {
         console.log("error: ", error);
+        this.load = false;
       }
     );
   }

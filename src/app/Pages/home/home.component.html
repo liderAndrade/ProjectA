@@ -11,12 +11,9 @@
   </div>
 </div>
 
+<div class="load" *ngIf="load">
+  <i class="fa fa-circle-o-notch fa-spin i-spin"></i>
+</div>
 <div class="principal-main animated fadeIn">
-  <div class="load" *ngIf="load">
-    <i class="fa fa-circle-o-notch fa-spin i-spin"></i>
-  </div>
-  <app-cardproduct
-    *ngFor="let item of valores"
-    [product]="item"
-  ></app-cardproduct>
+  <app-cardproduct *ngFor="let item of valores" [product]="item"></app-cardproduct>
 </div>

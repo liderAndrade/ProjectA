@@ -1,13 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-* {
-  font-family: "Poppins" sans-serif !important;
-}
-
 .max-width-365 {
   max-width: 365px;
 }
-
 .panel {
   width: 100%;
   margin-bottom: 20px;
@@ -132,5 +125,8 @@
 @media (max-width: 576px) {
   .bp-panel {
     width: 100%;
+  }
+  .bp-form-input {
+    width: 20%;
   }
 }

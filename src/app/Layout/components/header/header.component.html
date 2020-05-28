@@ -4,93 +4,41 @@
       <img src="../../../../assets/logo.svg" />
     </a>
 
-    <button
-      class="navbar-toggler botton-toggle"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler botton-toggle boton-focus" type="button" data-toggle="collapse"
+      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
       <span class="navbar-toggler-icon imagen-boton"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li [ngClass]="{ active: home, activehover: home, borderhover: !home }">
-          <a
-            class="nav-link clase"
-            [routerLink]="['/Home']"
-            (click)="routerTo('Home')"
-            >Home</a
-          >
+        <li [ngClass]="{ activehover: home, borderhover: !home }" routerLinkActive="active">
+          <a class="nav-link clase" [routerLink]="['/Home']" (click)="routerTo('Home')">Home</a>
         </li>
-        <li
-          class="borderhover"
-          [ngClass]="{
-            active: product,
+        <li class="borderhover" [ngClass]="{
             activehover: product,
             borderhover: !product
-          }"
-        >
-          <a
-            class="nav-link clase"
-            [routerLink]="['/Productos']"
-            (click)="routerTo('Productos')"
-            >Productos</a
-          >
+          }" routerLinkActive="active">
+          <a class="nav-link clase" [routerLink]="['/Productos']" (click)="routerTo('Productos')">Productos</a>
         </li>
-        <li
-          class="borderhover"
-          [ngClass]="{ active: about, activehover: about, borderhover: !about }"
-        >
-          <a
-            class="nav-link clase"
-            [routerLink]="['/Acercade']"
-            (click)="routerTo('Acercade')"
-            >Acerca De</a
-          >
+        <li class="borderhover" [ngClass]="{ activehover: about, borderhover: !about }" routerLinkActive="active">
+          <a class="nav-link clase" [routerLink]="['/Acercade']" (click)="routerTo('Acercade')">Acerca De</a>
         </li>
-        <li
-          class="borderhover"
-          [ngClass]="{ active: info, activehover: info, borderhover: !info }"
-        >
-          <a
-            class="nav-link clase"
-            [routerLink]="['/Info']"
-            (click)="routerTo('Info')"
-            >Información</a
-          >
+        <li class="borderhover" [ngClass]="{ activehover: info, borderhover: !info }" routerLinkActive="active">
+          <a class="nav-link clase" [routerLink]="['/Info']" (click)="routerTo('Info')">Información</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <div>
           <li class="nav-item dropdown" style="list-style: none;">
-            <a
-              class="nav-link dropdown-toggle link"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
+            <a class="nav-link dropdown-toggle link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
               <img src="../../../../assets/usuario.svg" style="height: 20px;" />
               <i class="arrow down"></i>
             </a>
-            <div
-              class="dropdown-menu clase"
-              aria-labelledby="navbarDropdown"
-              style="min-width: 0;"
-            >
-              <a
-                [routerLink]="['/login']"
-                class="dropdown-item clase"
-                (click)="routerTo('login')"
-                style="cursor: pointer; font-size: 0.8em !important;"
-                >Salir</a
-              >
+            <div class="dropdown-menu clase" aria-labelledby="navbarDropdown" style="min-width: 0;">
+              <a [routerLink]="['/login']" class="dropdown-item clase" (click)="routerTo('login')"
+                style="cursor: pointer; font-size: 0.8em !important;">Salir</a>
             </div>
           </li>
         </div>

@@ -1,38 +1,39 @@
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
-import { LayoutComponent } from "./layout.component";
-import { HomeComponent } from "../Pages/home/home.component";
-import { ProductComponent } from "../Pages/product/product.component";
-import { AboutComponent } from "../Pages/about/about.component";
-import { InfomationComponent } from "../Pages/infomation/infomation.component";
-import { AuthGuard } from "../shared/guard/auth.guard";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { LayoutComponent } from './layout.component';
+import { HomeComponent } from '../Pages/home/home.component';
+import { ProductComponent } from '../Pages/product/product.component';
+import { AboutComponent } from '../Pages/about/about.component';
+import { InfomationComponent } from '../Pages/infomation/infomation.component';
+import { AuthGuard } from '../shared/guard/auth.guard';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: LayoutComponent,
     children: [
       {
-        path: "",
-        redirectTo: "Home",
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'Home',
       },
       {
-        path: "Home",
+        path: 'Home',
         component: HomeComponent,
         canActivate: [AuthGuard],
       },
       {
-        path: "Productos",
+        path: 'Productos',
         component: ProductComponent,
         canActivate: [AuthGuard],
       },
       {
-        path: "Acercade",
+        path: 'Acercade',
         component: AboutComponent,
         canActivate: [AuthGuard],
       },
       {
-        path: "Info",
+        path: 'Info',
         component: InfomationComponent,
         canActivate: [AuthGuard],
       },
@@ -44,4 +45,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class LayoutRoutingModule {}
+export class LayoutRoutingModule { }

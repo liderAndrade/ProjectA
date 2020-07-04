@@ -8,9 +8,7 @@ export class GuardloginGuard implements CanActivate {
 
   constructor(private router: Router) { }
 
-  canActivate(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): boolean {
+  canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
 
     if (localStorage.getItem('is_loggin')) {
       this.router.navigate(['Home']);

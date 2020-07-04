@@ -1,5 +1,5 @@
-import { Injectable } from "@angular/core";
-import { EndPointProvider } from "../endpoint/endpoint";
+import { Injectable } from '@angular/core';
+import { EndPointProvider } from '../endpoint/endpoint';
 
 @Injectable()
 export class ApplicationProvider {

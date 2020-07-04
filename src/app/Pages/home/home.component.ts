@@ -16,17 +16,16 @@ export class HomeComponent implements OnInit {
   constructor(private coreService: ApplicationProvider) { }
 
   ngOnInit() {
-    this.coreService.GetProducts().subscribe(
-      (response: any) => {
-        this.valores = response;
-        if (this.valores.length > 1) {
-          this.load = false;
-        }
-      },
-      (error) => {
-        console.log('error: ', error);
+
+    this.coreService.GetProducts().subscribe((response: any) => {
+      this.valores = response;
+      if (this.valores.length > 1) {
         this.load = false;
       }
+    }, (error) => {
+      console.log('error: ', error);
+      this.load = false;
+    }
     );
   }
 
